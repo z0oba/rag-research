@@ -27,9 +27,10 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
     // langchain4j
-    implementation("dev.langchain4j:langchain4j-spring-boot-starter:0.36.2")
+//    implementation("dev.langchain4j:langchain4j-spring-boot-starter:0.36.2")
     implementation("dev.langchain4j:langchain4j-easy-rag:0.36.2")
     implementation("dev.langchain4j:langchain4j-ollama:0.36.2")
+    implementation("dev.langchain4j:langchain4j-chroma:0.36.2")
 
     // JSON
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")

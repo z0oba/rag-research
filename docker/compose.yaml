@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  chroma:
+    image: ghcr.io/chroma-core/chroma:0.4.24
+    container_name: chroma
+    ports:
+      - "8000:8000"
+    environment:
+      - IS_PERSISTENT=TRUE   # Хранить данные на диске (persist)
+    volumes:
+      - ./chroma_data:/chroma/.chroma/index

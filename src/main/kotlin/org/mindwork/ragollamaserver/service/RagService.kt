@@ -3,16 +3,15 @@ package org.mindwork.ragollamaserver.service
 import dev.langchain4j.model.chat.ChatLanguageModel
 import dev.langchain4j.model.embedding.EmbeddingModel
 import dev.langchain4j.store.embedding.EmbeddingStore
-import dev.langchain4j.store.embedding.inmemory.InMemoryEmbeddingStore
 import org.springframework.stereotype.Service
 
 
 @Service
 class RagService(
     private val embeddingModel: EmbeddingModel,
-    private val chatModel: ChatLanguageModel
+    private val chatModel: ChatLanguageModel,
+    private val embeddingStore: EmbeddingStore<String>,
 ) {
-    private val embeddingStore: EmbeddingStore<String> = InMemoryEmbeddingStore()
 
     fun index(docs: List<String>) {
         // Добавляем каждый текст с его эмбеддингом в in-memory store

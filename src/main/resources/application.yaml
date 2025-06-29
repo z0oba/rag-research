@@ -1,3 +1,5 @@
 spring:
   application:
     name: rag-ollama-server
+rag:
+  store: memory
